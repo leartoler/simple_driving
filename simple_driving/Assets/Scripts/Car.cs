@@ -7,7 +7,7 @@ public class Car : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float speedGainPerSecond = 0.2f;
-    [SerializeField] private float turnSpeed = 200f;
+    [SerializeField] private float turnSpeed = 100f;
 
     private Rigidbody rb;
 
@@ -22,15 +22,16 @@ public class Car : MonoBehaviour
     void Update()
     {
         speed += speedGainPerSecond * Time.deltaTime;
-        transform.Rotate(0f, steerValue * turnSpeed * Time.deltaTime, 0f);
-        rb.velocity = transform.forward * speed;
+        transform.Rotate(0f, steerValue * turnSpeed * Time.deltaTime, 0f);// <---------- Aqui está el fuckin error!"!!!°!!!!!!!!!!!!"
+        rb.velocity = transform.forward * speed * Time.deltaTime;
 
 
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime);   
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);   
     }
 
     //---
     //Para que se detenga el car
+    
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Wall")
