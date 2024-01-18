@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_SceneGame.unity
     guid: 182e9456dabecbe43b3c9a716568a7a2
+  - enabled: 1
+    path: Assets/Scenes/2_ScenePalaceLaw.unity
+    guid: 1f2a0cdecfb9a21438cb0062b9857c18
   m_configObjects: {}
