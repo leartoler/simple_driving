@@ -38,6 +38,15 @@ public class Car : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+        if (collision.gameObject.tag == "Scene_02")
+        {
+            SceneManager.LoadScene(2);
+            Debug.Log("Pasa a nivel 2");
+
+        }
+
+
+
     }
 
 
